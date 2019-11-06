@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-
+import React from 'react';
+import PotdInfo from './potdInfo';
 const PotdCard = (props) =>{
     
 
@@ -7,7 +7,11 @@ const PotdCard = (props) =>{
 
         <>
             <div className="potd_card">
-                <img src="" alt="NASA Photo"/>
+                <img src={props.image} alt="NASA"/>
+                <div className="text-contet">
+                    <PotdInfo title={props.response.title} explanation={props.response.explanation} date={props.response.date} />
+                </div>
+                
             </div>
 
         </>

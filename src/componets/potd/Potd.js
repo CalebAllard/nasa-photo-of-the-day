@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import PotdCard from "./PotdCard";
-import Axios from "axios";
+import axios from "axios";
 
 const Potd = () => {
     
-    const [img,setImg] = useState("");
+    const [thisData,setData] = useState({});
     useEffect(()=>{
-        Axios.get('https://api.nasa.gov/planetary/apod?api_key=Bo5ZYL7ES3AkrX6WxaGcvedXXhOx7JUtp7TTt8Xo')
+        axios.get('https://api.nasa.gov/planetary/apod?api_key=Bo5ZYL7ES3AkrX6WxaGcvedXXhOx7JUtp7TTt8Xo')
         .then(resp => {
             console.log(resp);
-            setImg = resp.data;
+            setData(resp.data);
+
+           
         })
         .catch(error => {
             console.log(`error : ${error}`);
@@ -19,9 +21,11 @@ const Potd = () => {
     },[]);
     return (
 
-        <>
-            <PotdCard />        
-        </>
+        <div className="card_group">
+            <PotdCard image={thisData.url} response={thisData} />
+            {/* {console.log(thisData)} */}
+
+        </div>
     );
 };
 
