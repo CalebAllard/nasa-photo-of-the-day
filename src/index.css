@@ -15,21 +15,21 @@ code {
   max-width:900px;
   margin:0 auto;
 }
-.card_group{
+/* .card_group{
   max-width:100%;
   padding: 2rem 1rem;
-}
-.potd_card{
+} */
+/* .potd_card{
   display:flex;
   justify-content:space-between;
   align-content:center;
   max-width:100%;
-}
+} */
 
-.potd_card img {
+/* img {
     width:45%;
-}
-.potd_card .text-contet{
+} */
+.text-contet{
   width:45%;
   
 }

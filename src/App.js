@@ -6,9 +6,9 @@ import Potd from "./componets/potd/Potd";
 
 function App() {
   const today = new Date();
-  const formatedDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`
+  const formatedDate = formatDateObj(today);
   console.log(formatedDate);
-  const [apod, setApod] = useState();
+  const [apodDate, setApodDate] = useState();
 
 
   return (
@@ -18,4 +18,9 @@ function App() {
   );
 }
 
+function formatDateObj(dateObj){
+  return `${dateObj.getFullYear()}-${dateObj.getMonth() + 1}-${dateObj.getDate()}`
+}
+
 export default App;
+

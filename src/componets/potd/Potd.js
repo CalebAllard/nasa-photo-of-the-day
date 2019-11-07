@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PotdCard from "./PotdCard";
 import axios from "axios";
+import {CardGroup} from "../../styled";
 
 const Potd = () => {
     
@@ -21,11 +22,11 @@ const Potd = () => {
     },[]);
     return (
 
-        <div className="card_group">
+        <CardGroup>
             <PotdCard image={thisData.url} response={thisData} />
             {/* {console.log(thisData)} */}
 
-        </div>
+        </CardGroup>
     );
 };
 
