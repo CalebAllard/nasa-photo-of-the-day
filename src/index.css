@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.App {
+  max-width:900px;
+  margin:0 auto;
+}
+/* .card_group{
+  max-width:100%;
+  padding: 2rem 1rem;
+} */
+/* .potd_card{
+  display:flex;
+  justify-content:space-between;
+  align-content:center;
+  max-width:100%;
+} */
+
+/* img {
+    width:45%;
+} */
+.text-contet{
+  width:45%;
+  
+}
